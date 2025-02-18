@@ -39,3 +39,20 @@ Animal::~Animal()
 }
 
 // ───────────────────────────────────── Methods ─────────────────────────────────────
+
+void Animal::makeSound() const
+{
+	if (this->type == "Dog") {
+		std::cout << "🐕 Woof" << std::endl;
+	}
+	else if (this->type == "Cat") {
+		std::cout << "🐈 Meow" << std::endl;
+	}
+}
+
+std::string Animal::getType() const
+{
+	return (this->type);
+}
+
+

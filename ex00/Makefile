@@ -21,6 +21,8 @@ NC = \033[0m # No Color
 # =============================== SOURCES ===================================== #
 
 SRCS = 	src/Animal.cpp \
+		src/Cat.cpp \
+		src/Dog.cpp \
 		src/main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
