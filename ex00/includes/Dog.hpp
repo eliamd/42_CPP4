@@ -10,20 +10,23 @@
 #include <iostream>
 
 
-class Dog : public Animal
-{
+class Dog : public Animal {
 private:
 public:
 	// ─────────────────────────────────── Constructor ───────────────────────────────────
 	Dog();
+
 	Dog(std::string type);
+
 	Dog(const Dog &copy);
+
 	Dog &operator=(const Dog &copy);
+
 	~Dog();
+
 	// ───────────────────────────────────── Methods ─────────────────────────────────────
+	void makeSound() const; // Override (Animal's method)
 };
-
-
 
 
 #endif //DOG_HPP

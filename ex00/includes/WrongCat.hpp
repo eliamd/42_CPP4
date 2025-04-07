@@ -1,34 +1,32 @@
 //
-// Created by Eliam on 18/02/2025.
+// Created by Eliam on 07/04/2025.
 //
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 #include <string>
 #include <iostream>
 
-
-class Cat : public Animal {
+class WrongCat : public WrongAnimal {
 private:
 public:
 	// ─────────────────────────────────── Constructor ───────────────────────────────────
-	Cat();
+	WrongCat();
 
-	Cat(std::string type);
+	WrongCat(std::string type);
 
-	Cat(const Cat &copy);
+	WrongCat(const WrongCat &copy);
 
-	Cat &operator=(const Cat &copy);
+	WrongCat &operator=(const WrongCat &copy);
 
 	// ─────────────────────────────────── Destructor ────────────────────────────────────
-	~Cat();
+	~WrongCat();
 
 	// ───────────────────────────────────── Methods ─────────────────────────────────────
-	void makeSound() const; // Override (Animal's method)
+	void makeSound() const;
 
 };
 
-
-#endif //CAT_HPP
+#endif //WRONGCAT_HPP

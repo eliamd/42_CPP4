@@ -23,6 +23,8 @@ NC = \033[0m # No Color
 SRCS = 	src/Animal.cpp \
 		src/Cat.cpp \
 		src/Dog.cpp \
+		src/WrongAnimal.cpp \
+		src/WrongCat.cpp \
 		src/main.cpp
 
 OBJS = $(SRCS:.cpp=.o)

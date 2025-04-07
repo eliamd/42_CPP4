@@ -1,26 +1,26 @@
 //
-// Created by Eliam on 17/02/2025.
+// Created by Eliam on 07/04/2025.
 //
 
-#include "../includes/Animal.hpp"
+#include "../includes/WrongAnimal.hpp"
 
 // ─────────────────────────────────── Constructor ───────────────────────────────────
 
-Animal::Animal() {
+WrongAnimal::WrongAnimal() {
 	this->type = "Default";
 	std::cout << ">>> 🔨 Default constructor called." << std::endl;
 }
 
-Animal::Animal(std::string type) {
+WrongAnimal::WrongAnimal(std::string type) {
 	this->type = type;
 	std::cout << ">>> 🔨Constructor with arg called." << std::endl;
 }
 
-Animal::Animal(const Animal &copy) : type(copy.type) {
+WrongAnimal::WrongAnimal(const WrongAnimal &copy) : type(copy.type) {
 	std::cout << ">>> 🔨Copy constructor called." << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &copy) {
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &copy) {
 	this->type = copy.type;
 
 	std::cout << ">>> 🔨Assignment constructor called." << std::endl;
@@ -29,16 +29,16 @@ Animal &Animal::operator=(const Animal &copy) {
 
 // ─────────────────────────────────── Destructor ────────────────────────────────────
 
-Animal::~Animal() {
+WrongAnimal::~WrongAnimal() {
 	std::cout << ">>> 🪓 Destructor called." << std::endl;
 }
 
 // ───────────────────────────────────── Methods ─────────────────────────────────────
 
-void Animal::makeSound() const {
+void WrongAnimal::makeSound() const {
 	return ;
 }
 
-std::string Animal::getType() const {
+std::string WrongAnimal::getType() const {
 	return (this->type);
 }

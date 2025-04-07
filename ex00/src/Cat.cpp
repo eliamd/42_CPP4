@@ -4,25 +4,22 @@
 
 #include "../includes/Cat.hpp"
 
-Cat::Cat()
-{
+Cat::Cat() {
 	this->type = "Cat";
 	std::cout << "Cat >>> 🔨 Default constructor called." << std::endl;
 }
 
 Cat::Cat(std::string type) {
-	(void)type;
+	(void) type;
 	this->type = "Cat";
 	std::cout << "Cat >>> 🔨Constructor with arg called." << std::endl;
 }
 
-Cat::Cat(const Cat &copy) : Animal(copy)
-{
+Cat::Cat(const Cat &copy) : Animal(copy) {
 	std::cout << "Cat >>> 🔨Copy constructor called." << std::endl;
 }
 
-Cat& Cat::operator=(const Cat &copy)
-{
+Cat &Cat::operator=(const Cat &copy) {
 	this->type = copy.type;
 	this->type = "Cat";
 
@@ -30,7 +27,10 @@ Cat& Cat::operator=(const Cat &copy)
 	return (*this);
 }
 
-Cat::~Cat()
-{
+void Cat::makeSound() const {
+	std::cout << "Cat >>> 🐱 Meow!" << std::endl;
+}
+
+Cat::~Cat() {
 	std::cout << "Cat >>> 🪓 Destructor called." << std::endl;
 }

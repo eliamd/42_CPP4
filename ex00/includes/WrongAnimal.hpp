@@ -1,34 +1,34 @@
 //
-// Created by Eliam on 18/02/2025.
+// Created by Eliam on 07/04/2025.
 //
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
-#include "Animal.hpp"
 #include <string>
 #include <iostream>
 
+class WrongAnimal {
+protected:
+	std::string type;
 
-class Cat : public Animal {
-private:
 public:
 	// ─────────────────────────────────── Constructor ───────────────────────────────────
-	Cat();
+	WrongAnimal();
 
-	Cat(std::string type);
+	WrongAnimal(std::string type);
 
-	Cat(const Cat &copy);
+	WrongAnimal(const WrongAnimal &copy);
 
-	Cat &operator=(const Cat &copy);
+	WrongAnimal &operator=(const WrongAnimal &copy);
 
 	// ─────────────────────────────────── Destructor ────────────────────────────────────
-	~Cat();
+	~WrongAnimal();
 
 	// ───────────────────────────────────── Methods ─────────────────────────────────────
-	void makeSound() const; // Override (Animal's method)
+	void makeSound() const;
 
+	std::string getType() const;
 };
 
-
-#endif //CAT_HPP
+#endif //WRONGANIMAL_HPP
