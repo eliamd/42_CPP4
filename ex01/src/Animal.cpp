@@ -6,25 +6,21 @@
 
 // ─────────────────────────────────── Constructor ───────────────────────────────────
 
-Animal::Animal()
-{
+Animal::Animal() {
 	this->type = "Default";
 	std::cout << ">>> 🔨 Default constructor called." << std::endl;
 }
 
-Animal::Animal(std::string type)
-{
+Animal::Animal(std::string type) {
 	this->type = type;
 	std::cout << ">>> 🔨Constructor with arg called." << std::endl;
 }
 
-Animal::Animal(const Animal &copy) : type(copy.type)
-{
+Animal::Animal(const Animal &copy) : type(copy.type) {
 	std::cout << ">>> 🔨Copy constructor called." << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &copy)
-{
+Animal &Animal::operator=(const Animal &copy) {
 	this->type = copy.type;
 
 	std::cout << ">>> 🔨Assignment constructor called." << std::endl;
@@ -33,25 +29,17 @@ Animal &Animal::operator=(const Animal &copy)
 
 // ─────────────────────────────────── Destructor ────────────────────────────────────
 
-Animal::~Animal()
-{
+Animal::~Animal() {
 	std::cout << ">>> 🪓 Destructor called." << std::endl;
 }
 
 // ───────────────────────────────────── Methods ─────────────────────────────────────
 
-void Animal::makeSound() const
-{
-	if (this->type == "Dog") {
-		std::cout << "🐕 Woof" << std::endl;
-	}
-	else if (this->type == "Cat") {
-		std::cout << "🐈 Meow" << std::endl;
-	}
+void Animal::makeSound() const {
+	return;
 }
 
-std::string Animal::getType() const
-{
+std::string Animal::getType() const {
 	return (this->type);
 }
 

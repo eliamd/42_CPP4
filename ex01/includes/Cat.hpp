@@ -11,23 +11,29 @@
 #include <iostream>
 
 
-class Cat : public Animal
-{
-	private:
-	Brain* brain;
-	
-	public:
+class Cat : public Animal {
+private:
+	Brain *brain;
+
+public:
 	// ─────────────────────────────────── Constructor ───────────────────────────────────
 	Cat();
+
 	Cat(std::string type);
+
 	Cat(const Cat &copy);
+
 	Cat &operator=(const Cat &copy);
+
 	// ─────────────────────────────────── Destructor ────────────────────────────────────
 	~Cat();
-	// ───────────────────────────────────── Methods ─────────────────────────────────────
-	std::string get_idea(int n) const;
-};
 
+	// ───────────────────────────────────── Methods ─────────────────────────────────────
+	virtual void makeSound() const; // Override
+	std::string get_idea(int n) const;
+
+	void set_idea(int n, std::string idea);
+};
 
 
 #endif //CAT_HPP

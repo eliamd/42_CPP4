@@ -8,21 +8,26 @@
 #include <string>
 #include <iostream>
 
-
-
 class Brain {
 private:
 	std::string ideas[100];
+
 public:
- // ─────────────────────────────────── Constructor ────────────────────────────────────
+	// ─────────────────────────────────── Constructor ────────────────────────────────────
 	Brain();
+
 	Brain(std::string ideas[100]);
+
 	Brain(Brain const &copy);
+
 	Brain operator=(Brain const &copy);
- // ──────────────────────────────────── Destructor ────────────────────────────────────
+
+	// ──────────────────────────────────── Destructor ────────────────────────────────────
 	~Brain();
- // ───────────────────────────────────── Methods ──────────────────────────────────────
-	std::string * get_ideas();
+
+	// ───────────────────────────────────── Methods ──────────────────────────────────────
+	std::string *get_ideas();
+
 	void set_ideas(std::string ideas[100]);
 };
 

@@ -12,22 +12,28 @@
 #include "Brain.hpp"
 
 
-class Dog : public Animal
-{
+class Dog : public Animal {
 private:
-	Brain* brain;
+	Brain *brain;
+
 public:
 	// ─────────────────────────────────── Constructor ───────────────────────────────────
 	Dog();
+
 	Dog(std::string type);
+
 	Dog(const Dog &copy);
+
 	Dog &operator=(const Dog &copy);
+
 	~Dog();
+
 	// ───────────────────────────────────── Methods ─────────────────────────────────────
+	virtual void makeSound() const; // Override
 	std::string get_idea(int n) const;
+
+	void set_idea(int n, std::string idea);
 };
-
-
 
 
 #endif //DOG_HPP
