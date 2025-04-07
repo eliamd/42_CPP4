@@ -20,12 +20,16 @@ int main() {
 
 	// Animal* a = new Animal();
 
+	std::cout << std::endl << "======== ✏️ Constructor ========" << std::endl << std::endl;
 	Animal* dog = new Dog();
 	Animal* cat = new Cat();
 
+	std::cout << std::endl << "======== 🐾 Make sound ========" << std::endl << std::endl;
 	dog->makeSound();
 	cat->makeSound();
 
+
+	std::cout << std::endl << "======== 🪓 Destructor ========" << std::endl << std::endl;
 	delete dog;
 	delete cat;
 

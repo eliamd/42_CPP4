@@ -4,8 +4,7 @@
 
 #include "../includes/Brain.hpp"
 
-Brain::Brain()
-{
+Brain::Brain() {
 	this->ideas[0] = "Manger";
 	this->ideas[1] = "Dormir";
 	this->ideas[2] = "Manger";
@@ -13,11 +12,9 @@ Brain::Brain()
 	std::cout << "Brain >>> 🧠 Default constructor called." << std::endl;
 }
 
-Brain::Brain(std::string ideas[100])
-{
+Brain::Brain(std::string ideas[100]) {
 	int i = 0;
-	while (i < 100)
-	{
+	while (i < 100) {
 		this->ideas[i] = ideas[i];
 		i++;
 	}
@@ -25,19 +22,15 @@ Brain::Brain(std::string ideas[100])
 	std::cout << "Brain >>> 🧠Constructor with arg called." << std::endl;
 }
 
-Brain::Brain(Brain const &copy)
-{
-    for (int i = 0; i < 100; ++i)
-    {
-        this->ideas[i] = copy.ideas[i];
-    }
-    std::cout << "Brain >>> 🧠 Copy constructor called." << std::endl;
+Brain::Brain(Brain const &copy) {
+	for (int i = 0; i < 100; ++i) {
+		this->ideas[i] = copy.ideas[i];
+	}
+	std::cout << "Brain >>> 🧠 Copy constructor called." << std::endl;
 }
 
-Brain Brain::operator=(Brain const &copy)
-{
-	for (int i = 0; i < 100; ++i)
-	{
+Brain Brain::operator=(Brain const &copy) {
+	for (int i = 0; i < 100; ++i) {
 		this->ideas[i] = copy.ideas[i];
 	}
 
@@ -45,20 +38,16 @@ Brain Brain::operator=(Brain const &copy)
 	return (*this);
 }
 
-void Brain::set_ideas(std::string ideas[100])
-{
-	for (int i = 0; i < 100; ++i)
-	{
+void Brain::set_ideas(std::string ideas[100]) {
+	for (int i = 0; i < 100; ++i) {
 		this->ideas[i] = ideas[i];
 	}
 }
 
-Brain::~Brain()
-{
+Brain::~Brain() {
 	std::cout << "Brain >>> 🧠🪓 Destructor called." << std::endl;
 }
 
-std::string * Brain::get_ideas()
-{
+std::string *Brain::get_ideas() {
 	return (this->ideas);
 }
